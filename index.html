@@ -58,21 +58,37 @@
         .layer-4 {
             width: calc(var(--centered-size) + (var(--layer-size) * 1));
             height: calc(var(--centered-size) + (var(--layer-size) * 1));
+
+            & > .number-box {
+                color: var(--color4);
+            }
         }
 
         .layer-3 {
             width: calc(var(--centered-size) + (var(--layer-size) * 2));
             height: calc(var(--centered-size) + (var(--layer-size) * 2));
+
+            & > .number-box {
+                color: var(--color3);
+            }
         }
 
         .layer-2 {
             width: calc(var(--centered-size) + (var(--layer-size) * 3));
             height: calc(var(--centered-size) + (var(--layer-size) * 3));
+
+            & > .number-box {
+                color: var(--color2);
+            }
         }
 
         .layer-1 {
             width: calc(var(--centered-size) + (var(--layer-size) * 4));
             height: calc(var(--centered-size) + (var(--layer-size) * 4));
+
+            & > .number-box {
+                color: var(--color1);
+            }
         }
 
         [class^="layer"] {
@@ -92,6 +108,12 @@
                 left: 0;
                 border-radius: 1000px;
                 background-image: linear-gradient(270deg, #dfdfdf, #ffffff, #ffffff);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                font-family: "Adwaita Sans", sans-serif;
+                font-weight: bold;
             }
         }
     </style>
@@ -99,13 +121,13 @@
 <body>
 <main>
     <div class="layer-1">
-        <div class="number-box"></div>
+        <div class="number-box">1</div>
         <div class="layer-2">
-            <div class="number-box"></div>
+            <div class="number-box">2</div>
             <div class="layer-3">
-                <div class="number-box"></div>
+                <div class="number-box">3</div>
                 <div class="layer-4">
-                    <div class="number-box"></div>
+                    <div class="number-box">4</div>
                     <div class="centered-point">
                         <div></div>
                     </div>
