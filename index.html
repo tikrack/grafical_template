@@ -11,7 +11,7 @@
             --color1: #3189D0;
             --color2: #842B7F;
             --color3: #E5725F;
-            --color4: #F71D7C;
+            --color4: #EF1E9E;
         }
 
         * {
@@ -100,11 +100,11 @@
             position: relative;
 
             & .number-box {
-                width: calc((var(--layer-size) / 2) - 6px);
-                height: calc((var(--layer-size) / 2) - 6px);
+                width: calc((var(--layer-size) / 2) - 10px);
+                height: calc((var(--layer-size) / 2) - 10px);
                 position: absolute;
                 top: 50%;
-                transform: translate(3px, -50%);
+                transform: translate(5px, -50%);
                 left: 0;
                 border-radius: 1000px;
                 background-image: linear-gradient(270deg, #dfdfdf, #ffffff, #ffffff);
@@ -116,6 +116,26 @@
                 font-weight: 900;
             }
         }
+
+        [class^="line"] {
+            width: calc((100% - var(--layer-size)) + 10px);
+            height: calc((100% - var(--layer-size)) + 10px);
+            background: transparent;
+            position: absolute;
+            border-radius: 10000px;
+            border-bottom: calc((var(--layer-size) / 2) - 10px) solid;
+            border-right: calc((var(--layer-size) / 2) - 10px) solid rgba(0, 0, 255, 0);
+            border-left: calc((var(--layer-size) / 2) - 10px) solid rgba(0, 0, 255, 0);
+            border-top: calc((var(--layer-size) / 2) - 10px) solid rgba(0, 0, 0, 0);
+            box-sizing: content-box;
+            rotate: 45deg;
+        }
+
+        .line-1 { border-bottom-color: var(--color1); }
+        .line-2 { border-bottom-color: var(--color2); }
+        .line-3 { border-bottom-color: var(--color3); }
+        .line-4 { border-bottom-color: var(--color4); }
+
     </style>
 </head>
 <body>
